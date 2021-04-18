@@ -1,9 +1,9 @@
 FROM centos
-run yum install httpd -y
+RUN yum install httpd -y
 
-copy /webapp/  /var/www/html/
+COPY /webapp/  /var/www/html/
 
-expose  80
+EXPOSE  80
 
-cmd /usr/sbin/httpd -DFOREGROUND
+CMD /usr/sbin/httpd -DFOREGROUND
 
